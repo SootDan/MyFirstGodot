@@ -1,8 +1,8 @@
 extends Node3D
 
 @onready var skyflower := $skyflower
-@onready var jelly_anim := $jellyfish_school/anim
-@onready var bubbles_anim := $bubbles/anim
+@onready var jelly_anim := $JellyfishPhysics/anim
+@onready var bubbles_anim := $anim
 @export var dupes := 9
 
 

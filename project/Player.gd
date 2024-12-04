@@ -27,3 +27,9 @@ func _physics_process(delta):
 		direction.y -= fall_acceleration * delta
 	velocity = direction * speed
 	move_and_slide()
+	
+
+func _on_body_entered(body):
+	if body is RigidBody3D:
+		var direction = (body.global_position - global_position).normalized()
+		body.apply_impulse(Vector3.ZERO, direction * 100.0)
