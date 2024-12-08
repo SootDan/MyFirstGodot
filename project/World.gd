@@ -33,7 +33,7 @@ func skyflower_creation(is_positive_z: bool):
 			randf_range(-1000, 1000),
 			randf_range(0, skyflower.position.y + 100),
 			randf_range(100, 1000) if is_positive_z 
-			else randf_range(skyflower.position.z - 100, -100)
+			else randf_range(skyflower.position.z, -300)
 		)
 		instance.rotation.x = randf_range(0, 360)
 		skyflower_color(instance)

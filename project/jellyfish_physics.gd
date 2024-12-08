@@ -3,7 +3,7 @@ extends RigidBody3D
 @export var oscillation_speed := 2.0
 @export var drift := 2.5
 @export var y_min := 5.0
-@export var y_max := 15.0
+@export var y_max := 40.0
 var can_swim := true
 var time_delta := 0.0
 
@@ -17,7 +17,7 @@ func _integrate_forces(state):
 	elif position.y > y_max:
 		upwards_drift = -5.0
 	else:
-		upwards_drift = randf_range(-1, 1)
+		upwards_drift = randf_range(-5, 5)
 	
 	var random_drift := Vector3(
 			randf(),
